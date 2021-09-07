@@ -37,28 +37,54 @@ main {
     margin: 0 0 1.5rem 0;
     line-height: 3.5rem;
   }
-  .learn__button {
-    width: 90%;
-    text-align: center;
-    font-size: 2rem;
-    color: #fff;
-    background: darkgrey;
-    border: none;
-    margin: 0 1rem 2rem 1rem;
+  .start-here {
+    background: grey;
+    margin: 1rem;
     padding: 1rem 1rem;
+    text-align: center;
+    color: #fff;
+    font-weight: normal;
+    font-size: 2rem;
   }
 
-  .orientation-img {
+  .section-img {
     width: 100%;
-    padding: 2rem 2rem 0;
+    padding: 1rem;
   }
-  .orientation__title {
+  .section__title {
     font-size: 2rem;
     margin-left: 2rem;
-    margin-bottom: 0.1rem;
+    margin-bottom: 1rem;
+    // padding-bottom: 2rem;
   }
-  .orientation__dates {
+  .section__information {
     font-size: 1.5rem;
-    margin: 1rem 2rem;
+    margin: 0 2rem;
+    line-height: 2.5rem;
+  }
+
+  .read-more {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: blueviolet;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+  }
+  .start__learning__title {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .start__learning {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+  .learn__subjects {
+    background: lightgrey;
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0.5rem 1rem;
+    padding: 2rem;
   }
 }
