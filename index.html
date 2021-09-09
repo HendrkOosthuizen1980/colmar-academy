@@ -9,20 +9,39 @@
   </head>
   <body>
     <header>
+
+      <!-- Mobile Menu -->
+
       <div class="mobile-menu">
         <img src="images/ic-logo.svg" />
 
         <img src="images/ic-on-campus.svg" />
 
-        <img src="images/ic-online.svg" />
+        <img src="images/ic-online.svg"  />
 
-        <img src="images/ic-login.svg" />
+        <img src="images/ic-login.svg"  />
+      </div>
+
+      <!-- Full Site Menu -->
+
+      <div class="site-menu">
+        <img class="site-menu__logo" src="images/ic-logo.svg" />
+        <h1 class="company__name">COLMAR<span>ACADEMY</span></h1>
+        <div class="site-menu__login">
+          <h3 class="site-menu__logins">On Campus</h3>
+          <h3 class="site-menu__logins">Online</h3>
+          <h3 class="site-menu__logins">Companies</h3>
+          <h3 class="site-menu__logins">Sign in</h3>
+
+
+        </div>
+
       </div>
     </header>
 
     <main>
       <section class="learn">
-        <img src="images/banner.jpg" class="learn__banner-img" />
+        <img src="images/banner.jpg" class="learn__banner__mobile-img" />
         <h1 class="learn__title">Learn something new everyday</h1>
         <h2 class="learn__description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -63,7 +82,20 @@
         <h1 class="start__learning__title">Start learning</h1>
         <h3 class="learn__subjects">Software engineering</h3>
         <h3 class="learn__subjects">Computer art</3>
+          <h3 class="learn__subjects">Design</3>
+            <h3 class="learn__subjects">Data</3>
+              <h3 class="learn__subjects">Business</3>
+                <h3 class="learn__subjects">Marketing</3>
       </section>
+      <section class="exhibits">
+        <h1 class="exhibits__title">Thesis exhibits</h1>
+        <video autoplay muted loop playsinline class="exhibits__video">
+          <source src="videos/thesis.mp4" type="video/mp4" />
+        </video>
+</section>
     </main>
+    <footer>
+      <p>&copyColmar Academy. All rights reserved</p>
+    </footer>
   </body>
 </html>

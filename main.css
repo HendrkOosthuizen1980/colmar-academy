@@ -12,14 +12,67 @@ body {
   height: 4rem;
   justify-content: space-around;
 }
+@media (min-width: 40rem) {
+  .mobile-menu {
+    display: none;
+  }
+}
 
-main .learn__banner-img {
+.site-menu {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+  padding-right: 1.5rem;
+}
+@media (max-width: 40rem) {
+  .site-menu {
+    display: none;
+  }
+}
+
+.site-menu__logo {
+  margin-left: 1.5rem;
+  height: 4rem;
+}
+@media (max-width: 40rem) {
+  .site-menu__logo {
+    display: none;
+  }
+}
+
+.company__name {
+  font-size: 1.5rem;
+}
+
+span {
+  color: grey;
+  font-weight: lighter;
+}
+
+.site-menu__login {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   width: 100%;
 }
+
+.site-menu__logins {
+  margin: 1rem;
+}
+
 main .learn {
   margin: 0;
   background: lightgrey;
   padding-bottom: 2rem;
+}
+main .learn .learn__banner__mobile-img {
+  width: 100%;
+}
+@media (min-width: 40rem) {
+  main .learn .learn__banner__mobile-img {
+    display: none;
+  }
 }
 main .learn__title {
   font-size: 3.5rem;
@@ -66,11 +119,13 @@ main .read-more {
   margin-left: 2rem;
   margin-bottom: 3rem;
 }
-main .start__learning__title {
+main .start__learning__title,
+main .exhibits__title {
   font-size: 3.5rem;
   text-align: center;
 }
-main .start__learning {
+main .start__learning,
+main .exhibits {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -82,6 +137,11 @@ main .learn__subjects {
   font-weight: normal;
   margin: 0.5rem 1rem;
   padding: 2rem;
+}
+
+footer p {
+  margin: 2.5rem 1rem 1rem 1rem;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

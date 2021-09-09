@@ -11,17 +11,63 @@ body {
   flex-direction: row;
   height: 4rem;
   justify-content: space-around;
+  @media (min-width: 40rem) {
+    display: none;
+  }
 }
 
-main {
-  .learn__banner-img {
-    width: 100%;
+.site-menu {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+  padding-right: 1.5rem;
+  @media (max-width: 40rem) {
+    display: none;
   }
+}
+
+.site-menu__logo {
+  margin-left: 1.5rem;
+  height: 4rem;
+  @media (max-width: 40rem) {
+    display: none;
+  }
+}
+
+.company__name {
+  font-size: 1.5rem;
+}
+
+span {
+  color: grey;
+  font-weight: lighter;
+}
+
+.site-menu__login {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.site-menu__logins {
+  margin: 1rem;
+}
+main {
   .learn {
     margin: 0;
     background: lightgrey;
     padding-bottom: 2rem;
+
+    .learn__banner__mobile-img {
+      width: 100%;
+      @media (min-width: 40rem) {
+        display: none;
+      }
+    }
   }
+
   .learn__title {
     font-size: 3.5rem;
     text-align: left;
@@ -70,11 +116,13 @@ main {
     margin-left: 2rem;
     margin-bottom: 3rem;
   }
-  .start__learning__title {
+  .start__learning__title,
+  .exhibits__title {
     font-size: 3.5rem;
     text-align: center;
   }
-  .start__learning {
+  .start__learning,
+  .exhibits {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -86,5 +134,12 @@ main {
     font-weight: normal;
     margin: 0.5rem 1rem;
     padding: 2rem;
+  }
+}
+
+footer {
+  p {
+    margin: 2.5rem 1rem 1rem 1rem;
+    font-size: 1rem;
   }
 }
