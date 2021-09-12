@@ -11,10 +11,12 @@ body {
   flex-direction: row;
   height: 4rem;
   justify-content: space-around;
-  @media (min-width: 40rem) {
+  @media (min-width: 60rem) {
     display: none;
   }
 }
+
+//  desktop site menu
 
 .site-menu {
   height: 4rem;
@@ -22,7 +24,7 @@ body {
   align-items: center;
   vertical-align: center;
   padding-right: 1.5rem;
-  @media (max-width: 40rem) {
+  @media (max-width: 60rem) {
     display: none;
   }
 }
@@ -30,7 +32,7 @@ body {
 .site-menu__logo {
   margin-left: 1.5rem;
   height: 4rem;
-  @media (max-width: 40rem) {
+  @media (max-width: 60rem) {
     display: none;
   }
 }
@@ -54,17 +56,19 @@ span {
 .site-menu__logins {
   margin: 1rem;
 }
-main {
-  .learn {
-    margin: 0;
-    background: lightgrey;
-    padding-bottom: 2rem;
 
-    .learn__banner__mobile-img {
-      width: 100%;
-      @media (min-width: 40rem) {
-        display: none;
-      }
+// mobile learn section
+
+.learn {
+  margin: 0;
+  background: lightgrey;
+  padding-bottom: 2rem;
+
+  .learn__banner-img {
+    width: 100%;
+    @media (min-width: 60rem) {
+      width: 60%;
+      padding: 2rem 0 0 1.5rem;
     }
   }
 
@@ -83,6 +87,7 @@ main {
     margin: 0 0 1.5rem 0;
     line-height: 3.5rem;
   }
+
   .start-here {
     background: grey;
     margin: 1rem;
@@ -92,49 +97,67 @@ main {
     font-weight: normal;
     font-size: 2rem;
   }
+}
 
-  .section-img {
+// Campus Detail
+
+.campus__detail {
+  .campus__detail-img {
     width: 100%;
     padding: 1rem;
+    @media (min-width: 60rem) {
+      display: none;
+    }
   }
-  .section__title {
+  .campus__detail__title {
     font-size: 2rem;
     margin-left: 2rem;
     margin-bottom: 1rem;
-    // padding-bottom: 2rem;
+    @media (min-width: 60rem) {
+      width: 50%;
+    }
   }
-  .section__information {
+  .campus__detail__information {
     font-size: 1.5rem;
     margin: 0 2rem;
     line-height: 2.5rem;
+    @media (min-width: 60rem) {
+      width: 50%;
+    }
   }
 
-  .read-more {
+  .campus__detail__read-more {
     font-size: 1.5rem;
     font-weight: normal;
     color: blueviolet;
     margin-left: 2rem;
     margin-bottom: 3rem;
+    @media (min-width: 60rem) {
+      width: 50%;
+    }
   }
-  .start__learning__title,
-  .exhibits__title {
-    font-size: 3.5rem;
-    text-align: center;
-  }
-  .start__learning,
-  .exhibits {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-  }
-  .learn__subjects {
-    background: lightgrey;
-    font-size: 2rem;
-    font-weight: normal;
-    margin: 0.5rem 1rem;
-    padding: 2rem;
-  }
+}
+
+// mobile start learning section
+
+.start__learning__title,
+.exhibits__title {
+  font-size: 3.5rem;
+  text-align: center;
+}
+.start__learning,
+.exhibits {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.learn__subjects {
+  background: lightgrey;
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0.5rem 1rem;
+  padding: 2rem;
 }
 
 footer {
