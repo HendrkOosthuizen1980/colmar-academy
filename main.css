@@ -110,9 +110,25 @@ body {
 }
 
 @media (min-width: 60rem) {
-  .campus__detail .campus__detail__orientation {
-    margin-left: 1.5rem;
+  .campus__detail {
+    display: flex;
+    flex-direction: row;
   }
+}
+@media (max-width: 60rem) {
+  .campus__detail .campus__detail__orientation {
+    display: none;
+  }
+}
+@media (min-width: 60rem) {
+  .campus__detail .orientation__information__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.campus__detail .campus__orientation__information {
+  display: flex;
+  flex-direction: row;
 }
 .campus__detail .campus__detail-img {
   width: 100%;
@@ -132,6 +148,44 @@ body {
     display: none;
   }
 }
+@media (min-width: 60rem) {
+  .campus__detail .orientation__detail__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 60rem) {
+  .campus__detail .campus__detail__campus {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 60rem) {
+  .campus__detail .campus__detail__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 60rem) {
+  .campus__detail .campus__detail__guest-lecture {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 60rem) {
+  .campus__detail .guest__detail__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.campus__detail .campus__detail__orientation__desktop-img {
+  height: 50%;
+}
+@media (max-width: 60rem) {
+  .campus__detail .campus__detail__orientation__desktop-img {
+    display: none;
+  }
+}
 .campus__detail .campus__detail__title {
   font-size: 2rem;
   margin-left: 2rem;
@@ -139,7 +193,7 @@ body {
 }
 @media (min-width: 60rem) {
   .campus__detail .campus__detail__title {
-    width: 50%;
+    width: 30%;
   }
 }
 .campus__detail .campus__detail__information {
@@ -149,7 +203,7 @@ body {
 }
 @media (min-width: 60rem) {
   .campus__detail .campus__detail__information {
-    width: 50%;
+    height: 50%;
   }
 }
 .campus__detail .campus__detail__read-more {

@@ -115,11 +115,28 @@ body {
 // Campus Detail
 
 .campus__detail {
+  @media (min-width: 60rem) {
+    display: flex;
+    flex-direction: row;
+  }
+
   .campus__detail__orientation {
-    @media (min-width: 60rem) {
-      margin-left: 1.5rem;
+    @media (max-width: 60rem) {
+      display: none;
     }
   }
+  .orientation__information__container {
+    @media (min-width: 60rem) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .campus__orientation__information {
+    display: flex;
+    flex-direction: row;
+  }
+
   .campus__detail-img {
     width: 100%;
     padding: 1rem;
@@ -136,12 +153,54 @@ body {
     }
   }
 
+  .orientation__detail__container {
+    @media (min-width: 60rem) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .campus__detail__campus {
+    @media (min-width: 60rem) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .campus__detail__container {
+    @media (min-width: 60rem) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .campus__detail__guest-lecture {
+    @media (min-width: 60rem) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .guest__detail__container {
+    @media (min-width: 60rem) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .campus__detail__orientation__desktop-img {
+    height: 50%;
+    @media (max-width: 60rem) {
+      display: none;
+    }
+  }
+
   .campus__detail__title {
     font-size: 2rem;
     margin-left: 2rem;
     margin-bottom: 1rem;
     @media (min-width: 60rem) {
-      width: 50%;
+      width: 30%;
     }
   }
   .campus__detail__information {
@@ -149,7 +208,7 @@ body {
     margin: 0 2rem;
     line-height: 2.5rem;
     @media (min-width: 60rem) {
-      width: 50%;
+      height: 50%;
     }
   }
 
