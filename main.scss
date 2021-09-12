@@ -27,34 +27,34 @@ body {
   @media (max-width: 60rem) {
     display: none;
   }
-}
 
-.site-menu__logo {
-  margin-left: 1.5rem;
-  height: 4rem;
-  @media (max-width: 60rem) {
-    display: none;
+  .site-menu__logo {
+    margin-left: 1.5rem;
+    height: 4rem;
+    @media (max-width: 60rem) {
+      display: none;
+    }
   }
-}
 
-.company__name {
-  font-size: 1.5rem;
-}
+  .company__name {
+    font-size: 1.5rem;
+  }
 
-span {
-  color: grey;
-  font-weight: lighter;
-}
+  span {
+    color: grey;
+    font-weight: lighter;
+  }
 
-.site-menu__login {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-}
+  .site-menu__login {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
 
-.site-menu__logins {
-  margin: 1rem;
+  .site-menu__logins {
+    margin: 1rem;
+  }
 }
 
 // mobile learn section
@@ -63,6 +63,19 @@ span {
   margin: 0;
   background: lightgrey;
   padding-bottom: 2rem;
+  @media (min-width: 60rem) {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 0 2rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .learn__detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.5rem;
+  }
 
   .learn__banner-img {
     width: 100%;
@@ -102,6 +115,11 @@ span {
 // Campus Detail
 
 .campus__detail {
+  .campus__detail__orientation {
+    @media (min-width: 60rem) {
+      margin-left: 1.5rem;
+    }
+  }
   .campus__detail-img {
     width: 100%;
     padding: 1rem;
@@ -109,6 +127,15 @@ span {
       display: none;
     }
   }
+
+  .campus__detail__desktop-img {
+    width: 60%;
+    padding-left: 1.5rem;
+    @media (max-width: 60rem) {
+      display: none;
+    }
+  }
+
   .campus__detail__title {
     font-size: 2rem;
     margin-left: 2rem;

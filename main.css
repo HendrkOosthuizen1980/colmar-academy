@@ -30,34 +30,29 @@ body {
     display: none;
   }
 }
-
-.site-menu__logo {
+.site-menu .site-menu__logo {
   margin-left: 1.5rem;
   height: 4rem;
 }
 @media (max-width: 60rem) {
-  .site-menu__logo {
+  .site-menu .site-menu__logo {
     display: none;
   }
 }
-
-.company__name {
+.site-menu .company__name {
   font-size: 1.5rem;
 }
-
-span {
+.site-menu span {
   color: grey;
   font-weight: lighter;
 }
-
-.site-menu__login {
+.site-menu .site-menu__login {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
 }
-
-.site-menu__logins {
+.site-menu .site-menu__logins {
   margin: 1rem;
 }
 
@@ -65,6 +60,20 @@ span {
   margin: 0;
   background: lightgrey;
   padding-bottom: 2rem;
+}
+@media (min-width: 60rem) {
+  .learn {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 0 2rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+.learn .learn__detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1.5rem;
 }
 .learn .learn__banner-img {
   width: 100%;
@@ -100,12 +109,26 @@ span {
   font-size: 2rem;
 }
 
+@media (min-width: 60rem) {
+  .campus__detail .campus__detail__orientation {
+    margin-left: 1.5rem;
+  }
+}
 .campus__detail .campus__detail-img {
   width: 100%;
   padding: 1rem;
 }
 @media (min-width: 60rem) {
   .campus__detail .campus__detail-img {
+    display: none;
+  }
+}
+.campus__detail .campus__detail__desktop-img {
+  width: 60%;
+  padding-left: 1.5rem;
+}
+@media (max-width: 60rem) {
+  .campus__detail .campus__detail__desktop-img {
     display: none;
   }
 }
