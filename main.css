@@ -115,6 +115,9 @@ body {
     flex-direction: row;
   }
 }
+.campus__detail .campus__detail__orientation {
+  width: 100%;
+}
 @media (max-width: 60rem) {
   .campus__detail .campus__detail__orientation {
     display: none;
@@ -130,6 +133,11 @@ body {
   display: flex;
   flex-direction: row;
 }
+.campus__detail .information__main__desktop-img {
+  width: 95%;
+  margin-left: 2rem;
+  padding-left: 1rem;
+}
 .campus__detail .campus__detail-img {
   width: 100%;
   padding: 1rem;
@@ -140,46 +148,84 @@ body {
   }
 }
 .campus__detail .campus__detail__desktop-img {
-  width: 60%;
-  padding-left: 1.5rem;
+  padding: 0.5 0 1.5rem 0;
+  margin-left: 1.5rem;
+  width: 35%;
 }
 @media (max-width: 60rem) {
   .campus__detail .campus__detail__desktop-img {
     display: none;
   }
 }
+.campus__detail .campus__lecture__desktop-img {
+  padding: 0 0 1rem 0;
+  margin-left: 1rem;
+  width: 35%;
+}
+@media (max-width: 60rem) {
+  .campus__detail .campus__lecture__desktop-img {
+    display: none;
+  }
+}
+.campus__detail .campus__detail__heading {
+  font-size: 3rem;
+  margin-left: 1rem;
+  padding-left: 2rem;
+  width: 80%;
+}
+.campus__detail .campus__detail__description {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-left: 1rem;
+  padding-left: 2rem;
+  width: 95%;
+}
+.campus__detail .campus__detail__footer {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-left: 1rem;
+  padding-left: 2rem;
+  width: 80%;
+}
 @media (min-width: 60rem) {
   .campus__detail .orientation__detail__container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 }
 @media (min-width: 60rem) {
   .campus__detail .campus__detail__campus {
     display: flex;
     flex-direction: row;
+    margin-top: 2rem;
+    padding-top: 2.5rem;
   }
 }
 @media (min-width: 60rem) {
   .campus__detail .campus__detail__container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 }
 @media (min-width: 60rem) {
   .campus__detail .campus__detail__guest-lecture {
     display: flex;
     flex-direction: row;
+    background: lightgrey;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    margin-left: 0;
+    margin-bottom: 8rem;
   }
 }
 @media (min-width: 60rem) {
   .campus__detail .guest__detail__container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
-}
-.campus__detail .campus__detail__orientation__desktop-img {
-  height: 50%;
 }
 @media (max-width: 60rem) {
   .campus__detail .campus__detail__orientation__desktop-img {
@@ -191,11 +237,6 @@ body {
   margin-left: 2rem;
   margin-bottom: 1rem;
 }
-@media (min-width: 60rem) {
-  .campus__detail .campus__detail__title {
-    width: 30%;
-  }
-}
 .campus__detail .campus__detail__information {
   font-size: 1.5rem;
   margin: 0 2rem;
@@ -203,7 +244,7 @@ body {
 }
 @media (min-width: 60rem) {
   .campus__detail .campus__detail__information {
-    height: 50%;
+    font-weight: lighter;
   }
 }
 .campus__detail .campus__detail__read-more {
@@ -213,12 +254,6 @@ body {
   margin-left: 2rem;
   margin-bottom: 3rem;
 }
-@media (min-width: 60rem) {
-  .campus__detail .campus__detail__read-more {
-    width: 50%;
-  }
-}
-
 .start__learning__title,
 .exhibits__title {
   font-size: 3.5rem;

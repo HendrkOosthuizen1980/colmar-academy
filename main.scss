@@ -121,10 +121,13 @@ body {
   }
 
   .campus__detail__orientation {
+    width: 100%;
+    // margin-top: 0;
     @media (max-width: 60rem) {
       display: none;
     }
   }
+
   .orientation__information__container {
     @media (min-width: 60rem) {
       display: flex;
@@ -137,6 +140,12 @@ body {
     flex-direction: row;
   }
 
+  .information__main__desktop-img {
+    width: 95%;
+    margin-left: 2rem;
+    padding-left: 1rem;
+  }
+
   .campus__detail-img {
     width: 100%;
     padding: 1rem;
@@ -146,17 +155,53 @@ body {
   }
 
   .campus__detail__desktop-img {
-    width: 60%;
-    padding-left: 1.5rem;
+    padding: 0.5 0 1.5rem 0;
+    margin-left: 1.5rem;
+    width: 35%;
+
     @media (max-width: 60rem) {
       display: none;
     }
+  }
+
+  .campus__lecture__desktop-img {
+    padding: 0 0 1rem 0;
+    margin-left: 1rem;
+    width: 35%;
+
+    @media (max-width: 60rem) {
+      display: none;
+    }
+  }
+
+  .campus__detail__heading {
+    font-size: 3rem;
+    margin-left: 1rem;
+    padding-left: 2rem;
+    width: 80%;
+  }
+
+  .campus__detail__description {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-left: 1rem;
+    padding-left: 2rem;
+    width: 95%;
+  }
+
+  .campus__detail__footer {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-left: 1rem;
+    padding-left: 2rem;
+    width: 80%;
   }
 
   .orientation__detail__container {
     @media (min-width: 60rem) {
       display: flex;
       flex-direction: column;
+      justify-content: center;
     }
   }
 
@@ -164,6 +209,9 @@ body {
     @media (min-width: 60rem) {
       display: flex;
       flex-direction: row;
+      margin-top: 2rem;
+      // margin-bottom: 0.5rem;
+      padding-top: 2.5rem;
     }
   }
 
@@ -171,6 +219,7 @@ body {
     @media (min-width: 60rem) {
       display: flex;
       flex-direction: column;
+      justify-content: center;
     }
   }
 
@@ -178,6 +227,11 @@ body {
     @media (min-width: 60rem) {
       display: flex;
       flex-direction: row;
+      background: lightgrey;
+      padding-top: 1rem;
+      margin-top: 1rem;
+      margin-left: 0;
+      margin-bottom: 8rem;
     }
   }
 
@@ -185,11 +239,11 @@ body {
     @media (min-width: 60rem) {
       display: flex;
       flex-direction: column;
+      justify-content: center;
     }
   }
 
   .campus__detail__orientation__desktop-img {
-    height: 50%;
     @media (max-width: 60rem) {
       display: none;
     }
@@ -199,16 +253,13 @@ body {
     font-size: 2rem;
     margin-left: 2rem;
     margin-bottom: 1rem;
-    @media (min-width: 60rem) {
-      width: 30%;
-    }
   }
   .campus__detail__information {
     font-size: 1.5rem;
     margin: 0 2rem;
     line-height: 2.5rem;
     @media (min-width: 60rem) {
-      height: 50%;
+      font-weight: lighter;
     }
   }
 
@@ -219,7 +270,6 @@ body {
     margin-left: 2rem;
     margin-bottom: 3rem;
     @media (min-width: 60rem) {
-      width: 50%;
     }
   }
 }
