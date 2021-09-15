@@ -132,6 +132,7 @@ body {
 .campus__detail .campus__orientation__information {
   display: flex;
   flex-direction: row;
+  margin-bottom: 1rem;
 }
 .campus__detail .information__main__desktop-img {
   width: 95%;
@@ -148,9 +149,9 @@ body {
   }
 }
 .campus__detail .campus__detail__desktop-img {
-  padding: 0.5 0 1.5rem 0;
+  padding: 0 0 1.5rem 0;
   margin-left: 1.5rem;
-  width: 35%;
+  width: 48%;
 }
 @media (max-width: 60rem) {
   .campus__detail .campus__detail__desktop-img {
@@ -160,7 +161,7 @@ body {
 .campus__detail .campus__lecture__desktop-img {
   padding: 0 0 1rem 0;
   margin-left: 1rem;
-  width: 35%;
+  width: 48%;
 }
 @media (max-width: 60rem) {
   .campus__detail .campus__lecture__desktop-img {
@@ -198,8 +199,6 @@ body {
   .campus__detail .campus__detail__campus {
     display: flex;
     flex-direction: row;
-    margin-top: 2rem;
-    padding-top: 2.5rem;
   }
 }
 @media (min-width: 60rem) {
@@ -254,26 +253,99 @@ body {
   margin-left: 2rem;
   margin-bottom: 3rem;
 }
-.start__learning__title,
-.exhibits__title {
+@media (min-width: 60rem) {
+  .start__learning {
+    display: none;
+  }
+}
+.start__learning .start__learning__title {
   font-size: 3.5rem;
   text-align: center;
 }
-
-.start__learning,
-.exhibits {
+.start__learning .start__learning {
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
 }
-
-.learn__subjects {
+.start__learning .learn__subjects {
   background: lightgrey;
   font-size: 2rem;
   font-weight: normal;
   margin: 0.5rem 1rem;
   padding: 2rem;
+}
+
+.exhibits .exhibits__title {
+  font-size: 3.5rem;
+  text-align: center;
+}
+.exhibits .exhibits {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.exhibits .exhibits__video {
+  width: 100%;
+}
+
+.start__learning__desktop {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(5, auto);
+  justify-content: center;
+  background: lightgrey;
+  padding: 2rem 4.5rem;
+  grid-gap: 2rem;
+}
+@media (max-width: 60rem) {
+  .start__learning__desktop {
+    display: none;
+  }
+}
+.start__learning__desktop .start__learning__title__desktop {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  justify-self: center;
+  align-self: center;
+}
+.start__learning__desktop .start__learning__desktop__heading {
+  font-size: 4rem;
+}
+.start__learning__desktop .course-software {
+  font-size: 2rem;
+  padding: 1rem 0.5rem 0.5rem;
+  font-weight: normal;
+}
+.start__learning__desktop .course-software__course {
+  font-size: 1.5rem;
+  padding: 0.5rem 0.5rem 0.5rem;
+  font-weight: lighter;
+}
+.start__learning__desktop .course-software__course__detail {
+  font-size: 1.5rem;
+  padding: 0.5rem 0.5rem 0.5rem;
+  font-weight: lighter;
+  width: 80%;
+}
+.start__learning__desktop .learning__software-engineering {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  background: #fff;
+  overflow: hidden;
+}
+.start__learning__desktop .learning__computer-art {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  background: #fff;
+  overflow: hidden;
+}
+.start__learning__desktop .learning__design {
+  grid-column-start: 3;
+  grid-row-start: 2;
+  background: #fff;
+  overflow: hidden;
 }
 
 footer p {
