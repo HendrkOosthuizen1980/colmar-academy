@@ -307,62 +307,89 @@ body {
     font-size: 3.5rem;
     text-align: center;
   }
-
-  .exhibits {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-  }
-  .exhibit__video__container {
+  .exhibits__container {
     @media (min-width: 60rem) {
-      width: 60%;
-      padding-left: 2rem;
+      display: flex;
+      flex-direction: row;
     }
   }
+
   .exhibits__video {
     width: 100%;
     @media (min-width: 60rem) {
-      width: 95%;
+      width: 60%;
     }
   }
-  .exhibits__main__container {
-    @media (min-width: 60rem) {
-      display: flex;
-      flex-direction: row;
-    }
-  }
-  .exhibit__information__container {
+  .exhibits__container__information {
     @media (min-width: 60rem) {
       display: flex;
       flex-direction: column;
     }
-  }
-  .exhibit__fisma__container {
-    display: none;
-    @media (min-width: 60rem) {
-      display: flex;
-      flex-direction: row;
-    }
-  }
-  .exhibit__now__container {
-    display: none;
-    @media (min-width: 60rem) {
-      display: flex;
-      flex-direction: row;
-    }
-  }
-  .exhibit__thesis__detail {
-    @media (mid-width: 60rem) {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-  .exhibit__urban__container {
-    padding-left: 2rem;
     @media (max-width: 60rem) {
       display: none;
     }
+  }
+
+  .exhibits__fisma__container {
+    @media (min-width: 60rem) {
+      display: flex;
+      flex-direction: row;
+      background: lightgrey;
+      margin-left: 1.5rem;
+    }
+  }
+
+  .exhibits__now__container {
+    @media (min-width: 60rem) {
+      display: flex;
+      flex-direction: row;
+      margin-left: 1.5rem;
+    }
+  }
+
+  .thesis-img {
+    @media (min-width: 60rem) {
+      padding: 1rem;
+    }
+  }
+
+  .exhibits__thesis__detail {
+    @media (min-width: 60rem) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .exhibits__thesis__title {
+    @media (min-width: 60rem) {
+      font-size: 2rem;
+      font-weight: lighter;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .exhibits__thesis__description {
+    @media (min-width: 60rem) {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      font-weight: lighter;
+      line-height: 2.5rem;
+    }
+  }
+}
+.exhibits__urban__container {
+  padding-left: 2rem;
+  width: 60%;
+  @media (max-width: 60rem) {
+    display: none;
+  }
+  .exhibits__urban__title {
+    font-size: 2.5rem;
+    font-weight: lighter;
+  }
+  .exhibits__urban__detail {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    line-height: 2.5rem;
   }
 }
 

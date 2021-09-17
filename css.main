@@ -280,12 +280,6 @@ body {
   font-size: 3.5rem;
   text-align: center;
 }
-@media (min-width: 60rem) {
-  .exhibits .exhibits__container {
-    display: flex;
-    flex-direction: row;
-  }
-}
 .exhibits .exhibits__video {
   width: 100%;
 }
@@ -295,76 +289,18 @@ body {
   }
 }
 @media (min-width: 60rem) {
-  .exhibits .exhibits__container__information {
+  .exhibits .exhibit__fisma__main {
     display: flex;
     flex-direction: column;
   }
 }
-@media (max-width: 60rem) {
-  .exhibits .exhibits__container__information {
-    display: none;
-  }
-}
-@media (min-width: 60rem) {
-  .exhibits .exhibits__fisma__container {
-    display: flex;
-    flex-direction: row;
-    background: lightgrey;
-    margin-left: 1.5rem;
-  }
-}
-@media (min-width: 60rem) {
-  .exhibits .exhibits__now__container {
-    display: flex;
-    flex-direction: row;
-    margin-left: 1.5rem;
-  }
-}
-@media (min-width: 60rem) {
-  .exhibits .thesis-img {
-    padding: 1rem;
-  }
-}
-@media (min-width: 60rem) {
-  .exhibits .exhibits__thesis__detail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-@media (min-width: 60rem) {
-  .exhibits .exhibits__thesis__title {
-    font-size: 2rem;
-    font-weight: lighter;
-    margin-bottom: 0.5rem;
-  }
-}
-@media (min-width: 60rem) {
-  .exhibits .exhibits__thesis__description {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    font-weight: lighter;
-    line-height: 2.5rem;
-  }
-}
-
-.exhibits__urban__container {
+.exhibits .exhibit__urban__container {
   padding-left: 2rem;
-  width: 60%;
 }
 @media (max-width: 60rem) {
-  .exhibits__urban__container {
+  .exhibits .exhibit__urban__container {
     display: none;
   }
-}
-.exhibits__urban__container .exhibits__urban__title {
-  font-size: 2.5rem;
-  font-weight: lighter;
-}
-.exhibits__urban__container .exhibits__urban__detail {
-  font-size: 1.5rem;
-  font-weight: lighter;
-  line-height: 2.5rem;
 }
 
 .start__learning__desktop {
@@ -452,4 +388,4 @@ footer p {
   font-size: 1rem;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=css.main.map */
