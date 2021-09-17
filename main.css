@@ -286,8 +286,63 @@ body {
   align-content: center;
   justify-content: center;
 }
+@media (min-width: 60rem) {
+  .exhibits .exhibit__video__container {
+    width: 60%;
+    padding-left: 2rem;
+  }
+}
 .exhibits .exhibits__video {
   width: 100%;
+}
+@media (min-width: 60rem) {
+  .exhibits .exhibits__video {
+    width: 95%;
+  }
+}
+@media (min-width: 60rem) {
+  .exhibits .exhibits__main__container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 60rem) {
+  .exhibits .exhibit__information__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.exhibits .exhibit__fisma__container {
+  display: none;
+}
+@media (min-width: 60rem) {
+  .exhibits .exhibit__fisma__container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.exhibits .exhibit__now__container {
+  display: none;
+}
+@media (min-width: 60rem) {
+  .exhibits .exhibit__now__container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (mid-width: 60rem) {
+  .exhibits .exhibit__thesis__detail {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.exhibits .exhibit__urban__container {
+  padding-left: 2rem;
+}
+@media (max-width: 60rem) {
+  .exhibits .exhibit__urban__container {
+    display: none;
+  }
 }
 
 .start__learning__desktop {
@@ -312,6 +367,7 @@ body {
 }
 .start__learning__desktop .start__learning__desktop__heading {
   font-size: 4rem;
+  text-align: center;
 }
 .start__learning__desktop .course-software {
   font-size: 2rem;
@@ -327,7 +383,7 @@ body {
   font-size: 1.5rem;
   padding: 0.5rem 0.5rem 0.5rem;
   font-weight: lighter;
-  width: 80%;
+  width: 85%;
 }
 .start__learning__desktop .learning__software-engineering {
   grid-column-start: 1;
@@ -346,6 +402,27 @@ body {
   grid-row-start: 2;
   background: #fff;
   overflow: hidden;
+}
+.start__learning__desktop .learning__data {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  background: #fff;
+  overflow: hidden;
+  padding-bottom: 2rem;
+}
+.start__learning__desktop .learning__business {
+  grid-column-start: 2;
+  grid-row-start: 3;
+  background: #fff;
+  overflow: hidden;
+  padding-bottom: 2rem;
+}
+.start__learning__desktop .learning__marketing {
+  grid-column-start: 3;
+  grid-row-start: 3;
+  background: #fff;
+  overflow: hidden;
+  padding-bottom: 2rem;
 }
 
 footer p {

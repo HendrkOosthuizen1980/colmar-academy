@@ -314,8 +314,55 @@ body {
     align-content: center;
     justify-content: center;
   }
+  .exhibit__video__container {
+    @media (min-width: 60rem) {
+      width: 60%;
+      padding-left: 2rem;
+    }
+  }
   .exhibits__video {
     width: 100%;
+    @media (min-width: 60rem) {
+      width: 95%;
+    }
+  }
+  .exhibits__main__container {
+    @media (min-width: 60rem) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .exhibit__information__container {
+    @media (min-width: 60rem) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .exhibit__fisma__container {
+    display: none;
+    @media (min-width: 60rem) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .exhibit__now__container {
+    display: none;
+    @media (min-width: 60rem) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .exhibit__thesis__detail {
+    @media (mid-width: 60rem) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .exhibit__urban__container {
+    padding-left: 2rem;
+    @media (max-width: 60rem) {
+      display: none;
+    }
   }
 }
 
@@ -341,6 +388,7 @@ body {
 
   .start__learning__desktop__heading {
     font-size: 4rem;
+    text-align: center;
   }
 
   .course-software {
@@ -359,7 +407,7 @@ body {
     font-size: 1.5rem;
     padding: 0.5rem 0.5rem 0.5rem;
     font-weight: lighter;
-    width: 80%;
+    width: 85%;
   }
   .learning__software-engineering {
     grid-column-start: 1;
@@ -379,20 +427,27 @@ body {
     background: #fff;
     overflow: hidden;
   }
-  // .learning__software-engineering {
-  //   grid-column-start: 1;
-  //   grid-row-start: 3;
-  //   background: #fff;
-  // }
-
-  // .learning__computer-art {
-  //   grid-column-start: 2;
-  //   grid-row-start: 3;
-  // }
-  // .learning__design {
-  //   grid-column-start: 3;
-  //   grid-row-start: 3;
-  // }
+  .learning__data {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    background: #fff;
+    overflow: hidden;
+    padding-bottom: 2rem;
+  }
+  .learning__business {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    background: #fff;
+    overflow: hidden;
+    padding-bottom: 2rem;
+  }
+  .learning__marketing {
+    grid-column-start: 3;
+    grid-row-start: 3;
+    background: #fff;
+    overflow: hidden;
+    padding-bottom: 2rem;
+  }
 }
 
 footer {
