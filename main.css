@@ -1,3 +1,7 @@
+:root {
+  --container-background: #ccc;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,6 +11,9 @@ body {
 }
 
 .mobile-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
   height: 4rem;
@@ -19,8 +26,11 @@ body {
 }
 
 .site-menu {
-  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  height: 4rem;
   align-items: center;
   vertical-align: center;
   padding-right: 1.5rem;
@@ -58,11 +68,14 @@ body {
 
 .learn {
   margin: 0;
-  background: lightgrey;
+  background: var(--container-background);
   padding-bottom: 2rem;
 }
 @media (min-width: 60rem) {
   .learn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     padding: 2rem 0 2rem 1.5rem;
@@ -70,6 +83,9 @@ body {
   }
 }
 .learn .learn__detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -111,6 +127,9 @@ body {
 
 @media (min-width: 60rem) {
   .campus__detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
   }
@@ -125,11 +144,17 @@ body {
 }
 @media (min-width: 60rem) {
   .campus__detail .orientation__information__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
   }
 }
 .campus__detail .campus__orientation__information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
   margin-bottom: 1rem;
@@ -190,6 +215,9 @@ body {
 }
 @media (min-width: 60rem) {
   .campus__detail .orientation__detail__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -197,12 +225,18 @@ body {
 }
 @media (min-width: 60rem) {
   .campus__detail .campus__detail__campus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
   }
 }
 @media (min-width: 60rem) {
   .campus__detail .campus__detail__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -210,9 +244,12 @@ body {
 }
 @media (min-width: 60rem) {
   .campus__detail .campus__detail__guest-lecture {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
-    background: lightgrey;
+    background: var(--container-background);
     padding-top: 1rem;
     margin-top: 1rem;
     margin-left: 0;
@@ -221,6 +258,9 @@ body {
 }
 @media (min-width: 60rem) {
   .campus__detail .guest__detail__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -263,17 +303,94 @@ body {
   text-align: center;
 }
 .start__learning .start__learning {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
 }
 .start__learning .learn__subjects {
-  background: lightgrey;
+  background: var(--container-background);
   font-size: 2rem;
   font-weight: normal;
   margin: 0.5rem 1rem;
   padding: 2rem;
+}
+
+.start__learning__desktop {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(3, auto);
+  justify-content: center;
+  background: lightgrey;
+  padding: 2rem 4.5rem;
+  grid-gap: 2rem;
+  grid-template-areas: "learning learning learning" "software computer design" "data business marketing";
+}
+@media (max-width: 60rem) {
+  .start__learning__desktop {
+    display: none;
+  }
+}
+.start__learning__desktop .start__learning__title__desktop {
+  grid-area: learning;
+  justify-self: center;
+  align-self: center;
+}
+.start__learning__desktop .start__learning__desktop__heading {
+  font-size: 4rem;
+  text-align: center;
+}
+.start__learning__desktop .course-software {
+  font-size: 2rem;
+  padding: 1rem 0.5rem 0.5rem;
+  font-weight: normal;
+}
+.start__learning__desktop .course-software__course {
+  font-size: 1.5rem;
+  padding: 0.5rem 0.5rem 0.5rem;
+  font-weight: lighter;
+}
+.start__learning__desktop .course-software__course__detail {
+  font-size: 1.5rem;
+  padding: 0.5rem 0.5rem 0.5rem;
+  font-weight: lighter;
+  width: 85%;
+}
+.start__learning__desktop .learning__software-engineering {
+  grid-area: software;
+  background: #fff;
+  overflow: hidden;
+}
+.start__learning__desktop .learning__computer-art {
+  grid-area: computer;
+  background: #fff;
+  overflow: hidden;
+}
+.start__learning__desktop .learning__design {
+  grid-area: design;
+  background: #fff;
+  overflow: hidden;
+}
+.start__learning__desktop .learning__data {
+  grid-area: data;
+  background: #fff;
+  overflow: hidden;
+  padding-bottom: 2rem;
+}
+.start__learning__desktop .learning__business {
+  grid-area: business;
+  background: #fff;
+  overflow: hidden;
+  padding-bottom: 2rem;
+}
+.start__learning__desktop .learning__marketing {
+  grid-area: marketing;
+  background: #fff;
+  overflow: hidden;
+  padding-bottom: 2rem;
 }
 
 .exhibits .exhibits__title {
@@ -282,6 +399,9 @@ body {
 }
 @media (min-width: 60rem) {
   .exhibits .exhibits__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
   }
@@ -296,6 +416,9 @@ body {
 }
 @media (min-width: 60rem) {
   .exhibits .exhibits__container__information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
   }
@@ -307,14 +430,20 @@ body {
 }
 @media (min-width: 60rem) {
   .exhibits .exhibits__fisma__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
-    background: lightgrey;
+    background: var(--container-background);
     margin-left: 1.5rem;
   }
 }
 @media (min-width: 60rem) {
   .exhibits .exhibits__now__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     margin-left: 1.5rem;
@@ -327,6 +456,9 @@ body {
 }
 @media (min-width: 60rem) {
   .exhibits .exhibits__thesis__detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -365,86 +497,6 @@ body {
   font-size: 1.5rem;
   font-weight: lighter;
   line-height: 2.5rem;
-}
-
-.start__learning__desktop {
-  display: grid;
-  grid-template-columns: repeat(3, 30%);
-  grid-template-rows: repeat(5, auto);
-  justify-content: center;
-  background: lightgrey;
-  padding: 2rem 4.5rem;
-  grid-gap: 2rem;
-}
-@media (max-width: 60rem) {
-  .start__learning__desktop {
-    display: none;
-  }
-}
-.start__learning__desktop .start__learning__title__desktop {
-  grid-column-start: 2;
-  grid-row-start: 1;
-  justify-self: center;
-  align-self: center;
-}
-.start__learning__desktop .start__learning__desktop__heading {
-  font-size: 4rem;
-  text-align: center;
-}
-.start__learning__desktop .course-software {
-  font-size: 2rem;
-  padding: 1rem 0.5rem 0.5rem;
-  font-weight: normal;
-}
-.start__learning__desktop .course-software__course {
-  font-size: 1.5rem;
-  padding: 0.5rem 0.5rem 0.5rem;
-  font-weight: lighter;
-}
-.start__learning__desktop .course-software__course__detail {
-  font-size: 1.5rem;
-  padding: 0.5rem 0.5rem 0.5rem;
-  font-weight: lighter;
-  width: 85%;
-}
-.start__learning__desktop .learning__software-engineering {
-  grid-column-start: 1;
-  grid-row-start: 2;
-  background: #fff;
-  overflow: hidden;
-}
-.start__learning__desktop .learning__computer-art {
-  grid-column-start: 2;
-  grid-row-start: 2;
-  background: #fff;
-  overflow: hidden;
-}
-.start__learning__desktop .learning__design {
-  grid-column-start: 3;
-  grid-row-start: 2;
-  background: #fff;
-  overflow: hidden;
-}
-.start__learning__desktop .learning__data {
-  grid-column-start: 1;
-  grid-row-start: 3;
-  background: #fff;
-  overflow: hidden;
-  padding-bottom: 2rem;
-}
-.start__learning__desktop .learning__business {
-  grid-column-start: 2;
-  grid-row-start: 3;
-  background: #fff;
-  overflow: hidden;
-  padding-bottom: 2rem;
-}
-.start__learning__desktop .learning__marketing {
-  grid-column-start: 3;
-  grid-row-start: 3;
-  background: #fff;
-  overflow: hidden;
-  padding-bottom: 2rem;
 }
 
 footer p {

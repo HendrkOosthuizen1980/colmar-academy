@@ -1,3 +1,13 @@
+:root {
+  --container-background: #ccc;
+}
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,7 +17,7 @@ body {
 }
 
 .mobile-menu {
-  display: flex;
+  @include display-flex;
   flex-direction: row;
   height: 4rem;
   justify-content: space-around;
@@ -19,8 +29,8 @@ body {
 //  desktop site menu
 
 .site-menu {
+  @include display-flex;
   height: 4rem;
-  display: flex;
   align-items: center;
   vertical-align: center;
   padding-right: 1.5rem;
@@ -61,17 +71,17 @@ body {
 
 .learn {
   margin: 0;
-  background: lightgrey;
+  background: var(--container-background);
   padding-bottom: 2rem;
   @media (min-width: 60rem) {
-    display: flex;
+    @include display-flex;
     flex-direction: row;
     padding: 2rem 0 2rem 1.5rem;
     margin-bottom: 2rem;
   }
 
   .learn__detail {
-    display: flex;
+    @include display-flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 1.5rem;
@@ -116,13 +126,12 @@ body {
 
 .campus__detail {
   @media (min-width: 60rem) {
-    display: flex;
+    @include display-flex;
     flex-direction: row;
   }
 
   .campus__detail__orientation {
     width: 100%;
-    // margin-top: 0;
     @media (max-width: 60rem) {
       display: none;
     }
@@ -130,13 +139,13 @@ body {
 
   .orientation__information__container {
     @media (min-width: 60rem) {
-      display: flex;
+      @include display-flex;
       flex-direction: column;
     }
   }
 
   .campus__orientation__information {
-    display: flex;
+    @include display-flex;
     flex-direction: row;
     margin-bottom: 1rem;
   }
@@ -159,7 +168,6 @@ body {
     padding: 0 0 1.5rem 0;
     margin-left: 1.5rem;
     width: 48%;
-
     @media (max-width: 60rem) {
       display: none;
     }
@@ -200,7 +208,7 @@ body {
 
   .orientation__detail__container {
     @media (min-width: 60rem) {
-      display: flex;
+      @include display-flex;
       flex-direction: column;
       justify-content: center;
     }
@@ -208,17 +216,14 @@ body {
 
   .campus__detail__campus {
     @media (min-width: 60rem) {
-      display: flex;
+      @include display-flex;
       flex-direction: row;
-      // margin-top: 1rem;
-      // margin-bottom: 0.5rem;
-      // padding-top: 2rem;
     }
   }
 
   .campus__detail__container {
     @media (min-width: 60rem) {
-      display: flex;
+      @include display-flex;
       flex-direction: column;
       justify-content: center;
     }
@@ -226,9 +231,9 @@ body {
 
   .campus__detail__guest-lecture {
     @media (min-width: 60rem) {
-      display: flex;
+      @include display-flex;
       flex-direction: row;
-      background: lightgrey;
+      background: var(--container-background);
       padding-top: 1rem;
       margin-top: 1rem;
       margin-left: 0;
@@ -238,7 +243,7 @@ body {
 
   .guest__detail__container {
     @media (min-width: 60rem) {
-      display: flex;
+      @include display-flex;
       flex-direction: column;
       justify-content: center;
     }
@@ -287,18 +292,101 @@ body {
     text-align: center;
   }
   .start__learning {
-    display: flex;
+    @include display-flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
   }
 
   .learn__subjects {
-    background: lightgrey;
+    background: var(--container-background);
     font-size: 2rem;
     font-weight: normal;
     margin: 0.5rem 1rem;
     padding: 2rem;
+  }
+}
+
+// start learning section desktop
+
+.start__learning__desktop {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(3, auto);
+  justify-content: center;
+  background: lightgrey;
+  padding: 2rem 4.5rem;
+  grid-gap: 2rem;
+  grid-template-areas:
+    'learning learning learning'
+    'software computer design'
+    'data business marketing';
+  @media (max-width: 60rem) {
+    display: none;
+  }
+  .start__learning__title__desktop {
+    // grid-column-start: 2;
+    // grid-row-start: 1;
+    grid-area: learning;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .start__learning__desktop__heading {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .course-software {
+    font-size: 2rem;
+    padding: 1rem 0.5rem 0.5rem;
+    font-weight: normal;
+  }
+
+  .course-software__course {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.5rem 0.5rem;
+    font-weight: lighter;
+  }
+
+  .course-software__course__detail {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.5rem 0.5rem;
+    font-weight: lighter;
+    width: 85%;
+  }
+  .learning__software-engineering {
+    grid-area: software;
+    background: #fff;
+    overflow: hidden;
+  }
+  .learning__computer-art {
+    grid-area: computer;
+    background: #fff;
+    overflow: hidden;
+  }
+  .learning__design {
+    grid-area: design;
+    background: #fff;
+    overflow: hidden;
+  }
+  .learning__data {
+    grid-area: data;
+    background: #fff;
+    overflow: hidden;
+    padding-bottom: 2rem;
+  }
+  .learning__business {
+    grid-area: business;
+    background: #fff;
+    overflow: hidden;
+    padding-bottom: 2rem;
+  }
+  .learning__marketing {
+    grid-area: marketing;
+    background: #fff;
+    overflow: hidden;
+    padding-bottom: 2rem;
   }
 }
 
@@ -309,7 +397,7 @@ body {
   }
   .exhibits__container {
     @media (min-width: 60rem) {
-      display: flex;
+      @include display-flex;
       flex-direction: row;
     }
   }
@@ -322,7 +410,7 @@ body {
   }
   .exhibits__container__information {
     @media (min-width: 60rem) {
-      display: flex;
+      @include display-flex;
       flex-direction: column;
     }
     @media (max-width: 60rem) {
@@ -332,16 +420,16 @@ body {
 
   .exhibits__fisma__container {
     @media (min-width: 60rem) {
-      display: flex;
+      @include display-flex;
       flex-direction: row;
-      background: lightgrey;
+      background: var(--container-background);
       margin-left: 1.5rem;
     }
   }
 
   .exhibits__now__container {
     @media (min-width: 60rem) {
-      display: flex;
+      @include display-flex;
       flex-direction: row;
       margin-left: 1.5rem;
     }
@@ -355,7 +443,7 @@ body {
 
   .exhibits__thesis__detail {
     @media (min-width: 60rem) {
-      display: flex;
+      @include display-flex;
       flex-direction: column;
       justify-content: center;
     }
@@ -390,90 +478,6 @@ body {
     font-size: 1.5rem;
     font-weight: lighter;
     line-height: 2.5rem;
-  }
-}
-
-// start learning section desktop
-
-.start__learning__desktop {
-  display: grid;
-  grid-template-columns: repeat(3, 30%);
-  grid-template-rows: repeat(5, auto);
-  justify-content: center;
-  background: lightgrey;
-  padding: 2rem 4.5rem;
-  grid-gap: 2rem;
-  @media (max-width: 60rem) {
-    display: none;
-  }
-  .start__learning__title__desktop {
-    grid-column-start: 2;
-    grid-row-start: 1;
-    justify-self: center;
-    align-self: center;
-  }
-
-  .start__learning__desktop__heading {
-    font-size: 4rem;
-    text-align: center;
-  }
-
-  .course-software {
-    font-size: 2rem;
-    padding: 1rem 0.5rem 0.5rem;
-    font-weight: normal;
-  }
-
-  .course-software__course {
-    font-size: 1.5rem;
-    padding: 0.5rem 0.5rem 0.5rem;
-    font-weight: lighter;
-  }
-
-  .course-software__course__detail {
-    font-size: 1.5rem;
-    padding: 0.5rem 0.5rem 0.5rem;
-    font-weight: lighter;
-    width: 85%;
-  }
-  .learning__software-engineering {
-    grid-column-start: 1;
-    grid-row-start: 2;
-    background: #fff;
-    overflow: hidden;
-  }
-  .learning__computer-art {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    background: #fff;
-    overflow: hidden;
-  }
-  .learning__design {
-    grid-column-start: 3;
-    grid-row-start: 2;
-    background: #fff;
-    overflow: hidden;
-  }
-  .learning__data {
-    grid-column-start: 1;
-    grid-row-start: 3;
-    background: #fff;
-    overflow: hidden;
-    padding-bottom: 2rem;
-  }
-  .learning__business {
-    grid-column-start: 2;
-    grid-row-start: 3;
-    background: #fff;
-    overflow: hidden;
-    padding-bottom: 2rem;
-  }
-  .learning__marketing {
-    grid-column-start: 3;
-    grid-row-start: 3;
-    background: #fff;
-    overflow: hidden;
-    padding-bottom: 2rem;
   }
 }
 
